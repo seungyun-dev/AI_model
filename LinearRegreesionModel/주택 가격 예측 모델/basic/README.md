@@ -31,6 +31,30 @@
   데이터를 Train/Test로 약 7:3 비율로 나누었다.(`random_state=42`)
 
 
+## Linear Regression 모델 생성 및 학습
+`sklearn.linear_model` 모듈의 `LinearRegression`을 이용하여<br>
+모델 생성 및 학습을 진행하였다(train 데이터로 학습)
+
+## 예측
+`predict` 함수를 이용하여 `X_test`에 대한 `y_test`를 예측한 결과를 출력해 보며<br>
+실제 `y_test`값과 비교해 보았다
+
+## 모델 평가(결정 계수/R<sup>2</sup>)
+Train 데이터에 대한 **결정 계수**(R<sup>2</sup>)는 약 `0.1875` 이며<br>
+Test 데이터에 대한 **결정 계수**(R<sup>2</sup>)는 약 `0.5847` 이다<br>
+일반적으로 Train 데이터에 대한 성능이 높게 나오는 편인데<br>
+이 실습(`basic`)의 경우 Test 데이터에 대한 성능이 더 높게 나왔다<br>
+
+이는 Train/Test 데이터가 무작위로 분할되는 과정에서 각 집합(Train/Test)에 포함된 데이터의 분포가 달라졌기 때문으로 추정된다.<br>
+특히 주택 가격에 극단적으로 큰 값(이상치로 판단 가능)이 포함되어 있어,<br>
+해당 데이터가 어느 집합(Train/Test)에 포함되었는지에 따라 결정계수(R<sup>2</sup>)가 영향을 받았을 가능성이 있다.
+
+
+
+
+
+  
+
 
 
   
